@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:Studio"
+    mc:Ignorable="d"
+    x:Class="Studio.MainPage">
+
+    <RelativeLayout>
+
+         <CarouselView x:Name="FirstCarousel" 
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle" />
+            </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <views:CustomView />
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+
+    </RelativeLayout>
+  
+</ContentPage>
